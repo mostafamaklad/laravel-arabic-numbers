@@ -1,0 +1,49 @@
+{
+    "name": "mostafamaklad/laravel-arabic-numbers",
+    "description": "Convert all Arabic numbers input to English Numbers",
+    "keywords": [
+        "laravel",
+        "middleware",
+        "arabic",
+        "numbers",
+        "mostafamaklad",
+        "maklad",
+        "mostafa"
+    ],
+    "homepage": "https://github.com/mostafamaklad/laravel-arabic-numbers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mostafa Maklad",
+            "email": "dev.mostafa.maklad@gmail.com",
+            "homepage": "https://github.com/mostafamaklad",
+            "role": "Owner"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "laravel/framework": "^5.0.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "~4.0|~5.0|~6.0|~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Maklad\\ArabicNumbers\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Maklad\\ArabicNumbers\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "check-style": "vendor/bin/phpcs --standard=psr2 src/",
+        "fix-style": "vendor/bin/phpcbf --standard=psr2 src/"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
