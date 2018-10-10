@@ -117,13 +117,13 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/g/mostafamaklad/laravel-arabic-numbers.svg?style=flat-square
 
 [link-codeclimate-maintainability]: https://codeclimate.com/github/mostafamaklad/laravel-arabic-numbers/maintainability
-[ico-codeclimate-maintainability]: https://api.codeclimate.com/v1/badges/005c3644a2db6b364514/maintainability
+[ico-codeclimate-maintainability]: https://api.codeclimate.com/v1/badges/ce771a5084604b5c8feb/maintainability
 
 [link-codacy]: https://www.codacy.com/app/mostafamaklad/laravel-arabic-numbers?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mostafamaklad/laravel-arabic-numbers&amp;utm_campaign=Badge_Grade
-[ico-codacy]: https://api.codacy.com/project/badge/Grade/11620283b18945e2beb77e59ddc90624
+[ico-codacy]: https://api.codacy.com/project/badge/Grade/d59514d4e06645c0bf89000f2491cfea
 
-[link-styleci]: https://styleci.io/repos/100894062
-[ico-styleci]: https://styleci.io/repos/100894062/shield?style=flat-square
+[link-styleci]: https://styleci.io/repos/152484267
+[ico-styleci]: https://styleci.io/repos/152484267/shield?style=flat-square
 
 [link-coveralls]: https://coveralls.io/github/mostafamaklad/laravel-arabic-numbers
 [ico-coveralls]: https://img.shields.io/coveralls/mostafamaklad/laravel-arabic-numbers.svg?style=flat-square
