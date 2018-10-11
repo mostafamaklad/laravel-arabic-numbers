@@ -64,9 +64,11 @@ class TransformsRequest
      */
     protected function cleanArray(array $data)
     {
-        return collect($data)->map(function ($value, $key) {
+        $keys = array_keys($data);
+        $items = array_map(function ($value, $key) {
             return $this->cleanValue($key, $value);
-        })->all();
+        }, $data, $keys);
+        return array_combine($keys, $items);
     }
 
     /**

@@ -1,12 +1,11 @@
 language: php
 
 php:
-- 5.4
-- 5.5
 - 5.6
 - 7.0
 - 7.1
 - 7.2
+- 7.3
 
 matrix:
     fast_finish: true
@@ -24,10 +23,10 @@ before_script:
 
 script:
 - mkdir -p build/logs
-- vendor/bin/phpunit
+- php vendor/bin/phpunit --coverage-clover build/coverage/xml
 
 after_success:
 - sh -c 'php vendor/bin/coveralls -v'
-- CODECLIMATE_REPO_TOKEN="d1e37bee7168ee1746010705b5a942b491d6d984dfa22eb873d7914335eb3065" vendor/bin/test-reporter --stdout > codeclimate.json
+- CODECLIMATE_REPO_TOKEN="ffc98cb63926402329f88aabec7e81d7a8de1c7c049e8bf2e11b81cb40b0220d" vendor/bin/test-reporter --stdout > codeclimate.json
 - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
 - php vendor/bin/codacycoverage clover build/coverage/xml
