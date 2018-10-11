@@ -8,6 +8,15 @@ use Symfony\Component\HttpFoundation\ParameterBag;
 class TransformsRequest
 {
     /**
+     * The attributes that should not be trimmed.
+     *
+     * @var array
+     */
+    protected $except = [
+        //
+    ];
+
+    /**
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request $request
@@ -31,9 +40,9 @@ class TransformsRequest
         $this->cleanParameterBag($request->query);
         if ($request->isJson()) {
             $this->cleanParameterBag($request->json());
-        } else {
-            $this->cleanParameterBag($request->request);
+            return;
         }
+        $this->cleanParameterBag($request->request);
     }
 
     /**
@@ -84,6 +93,10 @@ class TransformsRequest
      */
     protected function transform($key, $value)
     {
+        if (in_array($key, $this->except, true)) {
+            return $value;
+        }
+
         return $value;
     }
 }
