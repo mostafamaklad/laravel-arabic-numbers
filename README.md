@@ -27,7 +27,7 @@ This package allows you to fix Arabic numbers input .
 
 ## Installation
 
-This package can be used in Laravel 5.0 and up.
+This package can be used in Laravel 5.4 and up.
 
 You can install the package via composer:
 

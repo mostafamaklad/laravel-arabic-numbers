@@ -2,6 +2,8 @@
 
 namespace Maklad\ArabicNumbers\Http\Middleware;
 
+use Illuminate\Foundation\Http\Middleware\TransformsRequest;
+
 class ArabicNumbers extends TransformsRequest
 {
     /**
