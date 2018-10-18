@@ -24,14 +24,12 @@ class ArabicNumbers extends TransformsRequest
      */
     protected function transform($key, $value)
     {
-        if (in_array($key, $this->except, true)) {
+        if ((! is_string($value)) || in_array($key, $this->except, true)) {
             return $value;
         }
 
-        if (is_string($value)) {
-            $eastern = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
-            $western = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-            return str_replace($eastern, $western, $value);
-        }
+        $eastern = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+        $western = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        return str_replace($eastern, $western, $value);
     }
 }

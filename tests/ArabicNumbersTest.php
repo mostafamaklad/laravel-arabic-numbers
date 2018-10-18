@@ -76,7 +76,8 @@ class ArabicNumbersTest extends TestCase
             'nested_data' => [
                 'key1' => '٩٨٧',
                 'key2' => '٦٥٤',
-                'key3' => 321
+                'key3' => 321,
+                'key4' => '321'
             ],
             'password' => '١٢٣٤٥٦٧٨٩٠',
         ];
@@ -92,7 +93,8 @@ class ArabicNumbersTest extends TestCase
             $nested_data = $request->get('nested_data');
             $this->assertEquals('987', $nested_data['key1']);
             $this->assertEquals('654', $nested_data['key2']);
-            $this->assertEquals('321', $nested_data['key3']);
+            $this->assertEquals(321, $nested_data['key3']);
+            $this->assertEquals('321', $nested_data['key4']);
             $this->assertEquals('١٢٣٤٥٦٧٨٩٠', $request->get('password'));
         });
     }
